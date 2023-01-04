@@ -1,0 +1,6 @@
+name: rapids
+channels:
+  - anaconda
+dependencies:
+  - sympy
+prefix: /opt/conda/envs/awesome

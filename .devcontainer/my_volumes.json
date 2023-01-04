@@ -1,0 +1,6 @@
+[
+    {
+        "host": "../target_volume",
+        "target": "/workspace"
+    }
+]

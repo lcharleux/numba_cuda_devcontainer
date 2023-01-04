@@ -1,0 +1,1 @@
+docker build - < Dockerfile -t numba_cuda:latest
