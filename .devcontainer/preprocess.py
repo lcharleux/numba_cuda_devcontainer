@@ -14,7 +14,7 @@ data = {
     "UID": str(pwd.getpwnam(os.environ.get("USER")).pw_uid),
     "GID": str(pwd.getpwnam(os.environ.get("USER")).pw_gid),
     "TAG": "0.0",
-    "CONTAINER_REPO_PATH": os.path.relpath("../", "../..") + "/",
+    "CONTAINER_REPO_PATH": os.path.relpath("../", "../target_volume/") + "/",
 }
 
 # TEMPLATE

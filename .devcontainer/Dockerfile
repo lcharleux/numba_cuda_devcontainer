@@ -32,3 +32,4 @@ RUN echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
 
 SHELL ["/bin/bash", "--login", "-c"]
 RUN /bin/bash ~/.bashrc
+# ENTRYPOINT ["/bin/bash"]

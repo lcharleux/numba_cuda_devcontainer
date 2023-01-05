@@ -1,6 +1,10 @@
 [
     {
-        "host": "../target_volume",
+        "host": "../",
         "target": "/workspace"
+    },
+    {
+        "host": "../../cdmath/cdmath",
+        "target": "/python_packages/cdmath"
     }
 ]
