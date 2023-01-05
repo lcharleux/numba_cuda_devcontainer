@@ -4,6 +4,7 @@ FROM ${BASE_IMAGE}
 # BASIC LIBRARIES
 RUN apt-get update && \ 
      # apt install -y build-essential && \
+     apt-get install -y git &&\
      apt-get install -y wget &&\
      apt-get clean && \
      rm -rf /var/lib/apt/lists/* 
