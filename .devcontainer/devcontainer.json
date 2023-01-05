@@ -1,4 +1,5 @@
 {
+	"overrideCommand": true,
 	"initializeCommand": "cd $(pwd)/.devcontainer && python3 preprocess.py",
 	"name": "Numba Cuda Container",
 	"dockerComposeFile": "./docker-compose.yml",
@@ -50,6 +51,6 @@
 				"eamodio.gitlens"
 			]
 		}
-	},
-	"postCreateCommand": "ps -p $$ && echo '----------------' && cd ${CONTAINER_REPO_PATH} && /bin/bash .devcontainer/postCommand.sh"
+	}
+	// "postCreateCommand": "ps -p $$ && echo '----------------' && cd ${CONTAINER_REPO_PATH} && /bin/bash .devcontainer/postCommand.sh"
 }
