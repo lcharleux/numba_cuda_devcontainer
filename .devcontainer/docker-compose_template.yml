@@ -9,19 +9,16 @@ services:
         - USER_GID=$GID
         - CONTAINER_REPO_PATH=$CONTAINER_REPO_PATH
         - CONDA_ENV_NAME=awesome
-      context: .  
+      context: .
     # user: "1002:1002"
     # image: tutu:latest
     container_name: numba_cuda_test
     stdin_open: false
     # tty: true        # docker run -t
-    # deploy:
-    #   resources:
-    #     reservations:
-    #       devices:
-    #         - driver: nvidia
-    #           count: 2
-    #           capabilities: [gpu]
-            
-    
-     
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 2
+              capabilities: [gpu]

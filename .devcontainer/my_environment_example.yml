@@ -1,6 +1,6 @@
-name: rapids
+name: awesome
 channels:
   - anaconda
 dependencies:
-  - sympy
+  - numpy
 prefix: /opt/conda/envs/awesome

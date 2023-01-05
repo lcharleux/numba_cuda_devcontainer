@@ -3,6 +3,7 @@ import pwd
 from string import Template
 import json
 import shutil
+import hashlib
 
 # MY VOLUMES
 if not os.path.isfile("my_volumes.json"):
@@ -33,3 +34,8 @@ dct = dct.strip()
 
 open("docker-compose.yml", "w").write(dct)
 
+# ENV FILE CREATION
+current_dir = os.getcwd()
+hash_value = hashlib.sha256(str.encode(current_dir)).hexdigest()
+user_name = data["USER_NAME"]
+open("../.env", "w").write(f"COMPOSE_PROJECT_NAME={user_name}_{hash_value}")

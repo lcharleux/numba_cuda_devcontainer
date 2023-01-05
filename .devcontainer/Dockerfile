@@ -16,10 +16,18 @@ ENV CONDA_ENV_NAME=${CONDA_ENV_NAME}
 ENV CONDA_ENV_PATH=/opt/conda/envs/${CONDA_ENV_NAME}/bin/
 ENV CONTAINER_REPO_PATH=${CONTAINER_REPO_PATH}
 
+# POST-COMMAND FILES
+COPY ./postCreateCommands.sh /tmp/postCreateCommands.sh
+# COPY ./environment.yml /tmp/environment.yml
+COPY ./my_environment.yml /tmp/my_environment.yml
+
 
 # USER CREATION
 RUN groupadd --gid $USER_GID $USER_NAME \
     && useradd --uid $USER_UID --gid $USER_GID -m $USER_NAME
+
+RUN echo $USER_NAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USER_NAME \
+    && chmod 0440 /etc/sudoers.d/$USER_NAME
 
 RUN cd / && mkdir python_packages
 

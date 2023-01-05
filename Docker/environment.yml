@@ -1,0 +1,34 @@
+name: awesome
+channels:
+  - numba
+  - conda-forge
+  - defaults
+  - anaconda
+  - rapidsai
+  - nvidia
+dependencies:
+  - pip
+  - black
+  - pre-commit
+  - pytest
+  - rapids=22.12
+  - python=3.9
+  - cudatoolkit=11.5
+  - jupyterlab
+  - dask-sql
+  - dash
+  - graphistry
+  - pycaret
+  - xarray-spatial
+  - numba
+  - pandas
+  - yaml
+  - scipy
+  - jupyter
+  - jupyterlab
+  - ipympl
+  - pytables
+  - xlrd
+  - xlwt
+  - xlsxwriter
+prefix: /opt/conda/envs/awesome

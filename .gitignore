@@ -1,2 +1,4 @@
 .devcontainer/docker-compose.yml
 **/target_volume/*
+.env
+.devcontainer/my_environment.yml
