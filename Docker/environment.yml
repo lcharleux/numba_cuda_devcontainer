@@ -6,6 +6,7 @@ channels:
   - anaconda
   - rapidsai
   - nvidia
+  - plotly
 dependencies:
   - pip
   - black
@@ -31,4 +32,8 @@ dependencies:
   - xlrd
   - xlwt
   - xlsxwriter
+  - numpy
+  - matplotlib
+  - plotly
+  - tqdm
 prefix: /opt/conda/envs/awesome

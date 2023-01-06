@@ -4,7 +4,7 @@ FROM ${BASE_IMAGE}
 # BASIC LIBRARIES
 ENV DEBIAN_FRONTEND="noninteractive" TZ="Europe/London"
 RUN apt-get update && \
-    apt-get install -y git wget sudo cmake libncurses5-dev libncursesw5-dev build-essential && \
+    apt-get install -y git wget sudo cmake libncurses5-dev libncursesw5-dev build-essential ffmpeg libsm6 libxext6 && \
     apt-get clean
 
 # MINICONDA3 INSTALL
@@ -16,14 +16,9 @@ ENV CONDA_BIN_PATH /opt/conda/condabin/conda
 
 
 # CONDA ENV SETUP
-#ENV PATH=$CONDA_DIR/bin:$PATH
 ENV CONDA_ENV_NAME awesome
 
 SHELL ["/bin/bash", "--login", "-c"]
-
-# RUN ${CONDA_BIN_PATH} create -y -n awesome -c rapidsai -c conda-forge -c nvidia  \
-#     rapids=22.12 python=3.9 cudatoolkit=11.5 \
-#     jupyterlab dask-sql dash graphistry pycaret xarray-spatial
 
 # CONDA ENV CREATION
 RUN ${CONDA_BIN_PATH} create -y -n awesome
@@ -32,6 +27,9 @@ RUN ${CONDA_BIN_PATH} env update --file /tmp/environment.yml
 
 # PYTORCH INSTALL
 RUN /opt/conda/envs/awesome/bin/pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
+
+# OPEN-CV INSTALL
+RUN /opt/conda/envs/awesome/bin/pip install opencv-python opencv-contrib-python
 
 # NVTOP INSTALL
 RUN cd /tmp \
