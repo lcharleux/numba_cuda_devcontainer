@@ -2,3 +2,4 @@
 **/target_volume/*
 .env
 .devcontainer/my_environment.yml
+.devcontainer/my_volumes.json
