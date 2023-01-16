@@ -41,6 +41,11 @@ RUN cd /tmp \
 # HTOP INSTALL
 RUN apt-get install -y htop
 
+# LOCALES UPDATE
+RUN apt install locales && \
+    locale-gen en_US.UTF-8 && \
+    dpkg-reconfigure locales
+
 COPY tests /tmp/tests
 
 RUN echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
