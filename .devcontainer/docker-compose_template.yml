@@ -7,12 +7,11 @@ services:
         - USER_NAME=$USER_NAME
         - USER_UID=$UID
         - USER_GID=$GID
-        - CONTAINER_REPO_PATH=$CONTAINER_REPO_PATH
         - CONDA_ENV_NAME=awesome
       context: .
     # user: "1002:1002"
     # image: tutu:latest
-    container_name: numba_cuda_test
+    container_name: $CONTAINER_NAME
     stdin_open: false
     # tty: true        # docker run -t
     deploy:
