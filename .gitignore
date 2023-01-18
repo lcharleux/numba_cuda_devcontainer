@@ -3,3 +3,4 @@
 .env
 .devcontainer/my_environment.yml
 .devcontainer/my_volumes.json
+.devcontainer/my_config.json
