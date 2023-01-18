@@ -19,5 +19,5 @@ services:
         reservations:
           devices:
             - driver: nvidia
-              count: 2
+              count: $GPU_COUNT
               capabilities: [gpu]
