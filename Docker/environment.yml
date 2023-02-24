@@ -36,4 +36,9 @@ dependencies:
   - matplotlib
   - plotly
   - tqdm
+  - openpyxl
+  - dtale
+  - qgrid
+  - scikit-image
+  - scikit-learn
 prefix: /opt/conda/envs/awesome
