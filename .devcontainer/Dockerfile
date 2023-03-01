@@ -36,6 +36,8 @@ RUN echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
     echo "conda activate $CONDA_ENV_NAME" >> ~/.bashrc && \
     echo "export PYTHONPATH=\$PYTHONPATH:/python_packages/" >> ~/.bashrc
 
+RUN echo "alias sudo='sudo env PATH=\$PATH'" >> ~/.bashrc
+
 SHELL ["/bin/bash", "--login", "-c"]
 RUN /bin/bash ~/.bashrc
 # ENTRYPOINT ["/bin/bash"]
