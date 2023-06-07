@@ -36,4 +36,5 @@ dependencies:
   - matplotlib
   - plotly
   - tqdm
+  - pyqtgraph
 prefix: /opt/conda/envs/awesome

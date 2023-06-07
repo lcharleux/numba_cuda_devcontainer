@@ -8,12 +8,17 @@ services:
         - USER_UID=$UID
         - USER_GID=$GID
         - CONDA_ENV_NAME=awesome
+        - DISPLAY=:16
       context: .
     # user: "1002:1002"
     # image: tutu:latest
     container_name: $CONTAINER_NAME
     stdin_open: false
-    # tty: true        # docker run -t
+    network_mode: "host"
+    environment:
+      - DISPLAY=:16
+      - XDG_RUNTIME_DIR=/tmp/runtime-csaintmartin
+    privileged: true
     deploy:
       resources:
         reservations:

@@ -26,6 +26,7 @@ data = {
     "TAG": "0.0",
     "CONTAINER_NAME": f"{user_name}_{hash_value}",
     "GPU_COUNT": my_config["gpu_count"],
+    "DISPLAY": my_config["display"],
 }
 
 # TEMPLATE

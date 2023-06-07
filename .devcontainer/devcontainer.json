@@ -34,7 +34,11 @@
 					"tests"
 				],
 				"python.testing.unittestEnabled": false,
-				"python.testing.pytestEnabled": true
+				"python.testing.pytestEnabled": true,
+				"julia.executablePath": "/opt/julia/bin/julia",
+				"editor.wordWrap": "wordWrapColumn",
+				"editor.wordWrapColumn": 100,
+				"editor.ruler": 100,
 			},
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
@@ -47,9 +51,14 @@
 				"ms-toolsai.jupyter-renderers",
 				"mhutchie.git-graph",
 				"donjayamanne.githistory",
-				"eamodio.gitlens"
+				"eamodio.gitlens",
+				"fabiospampinato.vscode-highlight",
+				"cliffordfajardo.highlight-line-vscode",
+				"gruntfuggly.todo-tree",
+				"wayou.vscode-todo-highlight",
+				"julialang.language-julia"
 			]
-		}
+		},
 	},
 	"postCreateCommand": "cd /tmp && /bin/bash ./postCreateCommands.sh"
 }
