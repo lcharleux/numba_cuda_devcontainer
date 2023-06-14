@@ -1,7 +1,11 @@
 {
+    "display": ":0.0",
     "gpu_count":1,
     "volumes":
     [
-        "../:/workspace"
+        "../../:/workspace",
+        "/tmp/.X11-unix:/tmp/.X11-unix:rw",
+        "/home/csaintmartin/.Xauthority:/home/csaintmartin/.Xauthority:rw",
+        "/root/.Xauthority:/root/.Xauthority:rw"
     ]
 }

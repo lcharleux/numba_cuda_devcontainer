@@ -1,1 +1,1 @@
-docker run --gpus all --rm -it numba_cuda:latest 
+docker run --gpus all --rm -it numba_cuda_julia:latest 

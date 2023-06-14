@@ -8,7 +8,13 @@ services:
         - USER_UID=$UID
         - USER_GID=$GID
         - CONDA_ENV_NAME=awesome
+        - JULIA_RELEASE=1.9.0
+        - DISPLAY=$DISPLAY
       context: .
+    environment:
+      - DISPLAY
+    network_mode: "host"
+    privileged: true
     # user: "1002:1002"
     # image: tutu:latest
     container_name: $CONTAINER_NAME

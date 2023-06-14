@@ -18,6 +18,7 @@ for k, v in my_config_default.items():
 current_dir = os.getcwd()
 hash_value = hashlib.sha256(str.encode(current_dir)).hexdigest()
 user_name = os.environ.get("USER")
+display = os.environ.get("DISPLAY")
 
 data = {
     "USER_NAME": user_name,
@@ -26,6 +27,7 @@ data = {
     "TAG": "0.0",
     "CONTAINER_NAME": f"{user_name}_{hash_value}",
     "GPU_COUNT": my_config["gpu_count"],
+    "DISPLAY": display,
 }
 
 # TEMPLATE

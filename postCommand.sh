@@ -11,7 +11,6 @@ echo "Devcontainer post-command process done !"
 echo "Running unit tests"
 pytest
 
-
 echo "Installing custom packages from my_environment.yml file."
 if [ -e .devcontainer/my_environment.yml ]
 then
