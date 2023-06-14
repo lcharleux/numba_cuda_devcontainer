@@ -41,6 +41,8 @@ RUN echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
     echo "export PYTHONPATH=\$PYTHONPATH:/python_packages/" >> ~/.bashrc && \
     echo "export PATH=\$PATH:/opt/julia/bin" >> ~/.bashrc
 
+RUN echo "alias sudo='sudo env PATH=\$PATH'" >> ~/.bashrc
+
 SHELL ["/bin/bash", "--login", "-c"]
 RUN /bin/bash ~/.bashrc
 
